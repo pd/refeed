@@ -6,7 +6,8 @@ require 'refeed/rewriters'
 $feeds = {
   'smbc'       => ['http://feeds.feedburner.com/smbc-comics/PvLb', Refeed::Rewriter::SMBC],
   'powers'     => ['http://feeds.feedburner.com/amazingsuperpowers', Refeed::Rewriter::SuperPowers],
-  'buttersafe' => ['http://feeds.feedburner.com/buttersafe', Refeed::Rewriter::Buttersafe]
+  'buttersafe' => ['http://feeds.feedburner.com/buttersafe', Refeed::Rewriter::Buttersafe],
+  'hedges'     => ['http://feeds.feedburner.com/Truthdig/ChrisHedges', Refeed::Rewriter::Hedges]
 }
 
 get '/refeed/:name' do
