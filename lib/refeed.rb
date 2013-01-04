@@ -4,7 +4,8 @@ require 'rss'
 require 'refeed/rewriters'
 
 $feeds = {
-  'smbc' => ['http://feeds.feedburner.com/smbc-comics/PvLb', Refeed::Rewriter::SMBC]
+  'smbc' => ['http://feeds.feedburner.com/smbc-comics/PvLb', Refeed::Rewriter::SMBC],
+  'asp'  => ['http://feeds.feedburner.com/amazingsuperpowers', Refeed::Rewriter::SuperPowers],
 }
 
 get '/refeed/:name' do
