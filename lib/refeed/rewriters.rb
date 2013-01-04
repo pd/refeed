@@ -44,4 +44,15 @@ module Refeed
       end
     end
   end
+
+  class Rewriter::Buttersafe < Rewriter
+    def rewrite
+      feed.items.each do |item|
+        next unless match = item.description.match(/src="(.+\/comics\/rss\/.+?.jpg)"/)
+        puts "doing the replace ..."
+        src = match[1].gsub('rss/', '').gsub('RSS', '')
+        item.description = "<p><img src=\"#{src}\"></p>"
+      end
+    end
+  end
 end

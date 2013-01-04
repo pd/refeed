@@ -4,8 +4,9 @@ require 'rss'
 require 'refeed/rewriters'
 
 $feeds = {
-  'smbc'   => ['http://feeds.feedburner.com/smbc-comics/PvLb', Refeed::Rewriter::SMBC],
-  'powers' => ['http://feeds.feedburner.com/amazingsuperpowers', Refeed::Rewriter::SuperPowers],
+  'smbc'       => ['http://feeds.feedburner.com/smbc-comics/PvLb', Refeed::Rewriter::SMBC],
+  'powers'     => ['http://feeds.feedburner.com/amazingsuperpowers', Refeed::Rewriter::SuperPowers],
+  'buttersafe' => ['http://feeds.feedburner.com/buttersafe', Refeed::Rewriter::Buttersafe]
 }
 
 get '/refeed/:name' do
