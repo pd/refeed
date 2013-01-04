@@ -38,7 +38,9 @@ module Refeed
       feed.items.each do |item|
         next unless match = item.description.match(/src="http.+?comics(?:-rss)?\/(\d{4}-\d{2}-\d{2})/)
         hidden_url = "http://www.amazingsuperpowers.com/hc/comics/#{match[1]}.jpg"
-        item.description << "<p><br><br><img src=\"#{hidden_url}\"></p>"
+        extra = "<p><br><br><img src=\"#{hidden_url}\"></p>"
+        item.description << extra
+        item.content_encoded << extra
       end
     end
   end
