@@ -15,6 +15,7 @@ module Refeed
 
     def refeed
       rewrite
+      feed.channel.title = "#{feed.channel.title} (refed)"
       feed
     end
 
