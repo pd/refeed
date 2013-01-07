@@ -67,4 +67,14 @@ module Refeed
       end
     end
   end
+
+  class Rewriter::Taibbi < Rewriter
+    def rewrite
+      feed.items.each do |item|
+        next unless url = item.link
+        content = open("#{url}?print=true").read
+        item.content_encoded = content
+      end
+    end
+  end
 end
