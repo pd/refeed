@@ -8,7 +8,8 @@ $feeds = {
   'powers'     => ['http://feeds.feedburner.com/amazingsuperpowers', Refeed::Rewriter::SuperPowers],
   'buttersafe' => ['http://feeds.feedburner.com/buttersafe', Refeed::Rewriter::Buttersafe],
   'hedges'     => ['http://feeds.feedburner.com/Truthdig/ChrisHedges', Refeed::Rewriter::Hedges],
-  'taibbi'     => ['http://www.rollingstone.com/siteServices/rss/taibbiBlog', Refeed::Rewriter::Taibbi]
+  'taibbi'     => ['http://www.rollingstone.com/siteServices/rss/taibbiBlog', Refeed::Rewriter::Taibbi],
+  'toothpaste' => ['http://toothpastefordinner.com/', Refeed::Writer::ToothPaste]
 }
 
 get '/refeed/:name' do
